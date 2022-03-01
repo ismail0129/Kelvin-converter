@@ -1,19 +1,22 @@
 <!Doctype Html> 
-<script src="Main.js"></script>
+<script src="Index.js"></script>
 <html>
     <title>Convert</title>
     <head>
         <form  name="form1">
-            <label for="Kelvin">Temprature in Kelvin </label><br>
-            <input type="number" id="Kelvin" ><br><br>
-            <label for="Celsuis">Temprature in Celsuis</label><br>
-            <input type="number" id="Celsuis"><br><br>
-            <label for="Fahrenheit">Temprature in Fahrenheit</label>
-            <input type="number" id="Fahrenheit">
-            <label for="Newton">Temprature in Newton </label>
-            <input type="number" id="Newton">
-            <input type="submit" value="submit" onclick="check(this.form)">
+            <h4>Convert from <span id="Name"></span></h4>
+            <select id="Select" onchange="check(this.forum)" oninput="check(this.forum)">
+                <option>null</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Celsuis">Celsuis</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Newton_temp">Newton_temp</option>
+            </select>
+            <input type="number" id="number" onchange="check(this.forum)" oninput="check(this.forum)">
         </form>
-        <p id="RESULT"> </p><br>
+        <p>In kelvin :<span id="outKelvin"></span></p>
+        <p>In Celsuis :<span id="outCelsuis"></span></p>
+        <p>In Fahrenheit :<span id="outFahrenhite"></span></p>
+        <p>In Newton_temp :<span id="outNew"></span></p>
         </head>
-</html>
+</html> 
