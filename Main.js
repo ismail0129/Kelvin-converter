@@ -1,14 +1,26 @@
 function check(form){
-let Kelvin = Kelvin.value
-let Celsuis = Celsuis.value 
-let Fahrenheit = Fahrenheit.value
-let Newton_temp = Newton.value
-Celsuis = Kelvin - 273
-Fahrenheit = Celsuis *(9/5) +32
-Fahrenheit = Math.floor(Fahrenheit)
-Newton_temp = Math.floor(Celsuis *(33/100))
-console.log(`The temperature is ${Fahrenheit} degrees Fahrenheit F°.`)
-console.log(`The temperature is ${Celsuis} degrees Celsuis C°.`)
-console.log(`The temperature is ${Kelvin} degrees Kelvin K°.`)
-console.log(`The temperature is ${Newton_temp} degrees Newton N°.`)  
+let select = document.getElementById("Select").value
+let num = number.value
+if (select === "Kelvin"){
+    document.getElementById("Name").innerText = "Kelvin"
+    document.getElementById("outKelvin").innerText = num
+    document.getElementById("outCelsuis").innerText = (num - 273)
+    document.getElementById("outFahrenhite").innerText = (num - 273)*9/5 +32
+    document.getElementById("outNew").innerText = (num - 273)*(33/100)
+}else{}
+if (select === "Celsuis"){
+    document.getElementById("Name").innerText = "Celsuis"
+    document.getElementById("outKelvin").innertext = (num + 273)
+    document.getElementById("outCelsuis").innerText = (num)
+    document.getElementById("outFahrenhite").innerText = num *9/5 +32
+    document.getElementById("outNew").innerText = num *(33/100)
+}else{}
+if (select === "Fahrenheit"){
+    document.getElementById("Name").innerText = "Fahrenheit"
+    document.getElementById("outKelvin").innertext = ( num - 32*5/9)+273
+    document.getElementById("outCelsuis").innerText = (num -32) *5/9
+    document.getElementById("outFahrenhite").innerText = num
+    document.getElementById("outNew").innerText = (num - 32) *11/16
+    
+}
 }
